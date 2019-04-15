@@ -664,6 +664,8 @@ jsPsych.pluginAPI.preloadImages(vaast_instructions_images);
 jsPsych.pluginAPI.preloadImages(vaast_bg_filename);
 
 // timeline initiaization ---------------------------------------------------------------
+https://marinerougier.github.io/Expe6_RC_3appuis/RCmarine2.html
+
 
 if(is_compatible) {
   jsPsych.init({
@@ -673,7 +675,7 @@ if(is_compatible) {
       },
     on_finish: function() {
         saving_browser_events(completion = true);
-        window.location.href = "https://uclpsychology.co1.qualtrics.com/jfe/form/SV_0NRoqjK0V6IpikJ?jspsych_id=" + jspsych_id + "?prolificID="+ 
+        window.location.href = "https://marinerougier.github.io/Expe6_RC_3appuis/RCmarine2.html?jspsych_id=" + jspsych_id + "?prolificID="+ 
         prolificID;
     }
   });
