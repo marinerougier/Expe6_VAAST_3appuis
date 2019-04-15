@@ -68,7 +68,8 @@ if(!is_compatible) {
   if(prolificID == null) {prolificID = "999";}
   var jspsych_id = jsPsych.randomization.randomID(15)
 
-  //var session_id  = jsPsych.randomization.randomID();
+  // Preload images
+  var preloadimages = [];
 
   // connection status ---------------------------------------------------------------------
   // This section ensure that we don't lose data. Anytime the 
@@ -133,6 +134,44 @@ var showing_cursor = {
     type: 'call-function',
     func: show_cursor
 }
+
+// Preload images in the VAAST 
+// Preload faces
+  var faces = [
+      "stimuli/Face19_B.png",
+      "stimuli/Face28_B.png",
+      "stimuli/Face55_B.png",
+      "stimuli/Face95_B.png",
+      "stimuli/Face104_B.png",
+      "stimuli/Face115_B.png",
+      "stimuli/Face119_B.png",
+      "stimuli/Face142_B.png",
+      "stimuli/Face10_J.png",
+      "stimuli/Face16_J.png",
+      "stimuli/Face17_J.png",
+      "stimuli/Face45_J.png",
+      "stimuli/Face85_J.png",
+      "stimuli/Face103_J.png",
+      "stimuli/Face116_J.png",
+      "stimuli/Face132_J.png",
+      "stimuli/Face19_J.png",
+      "stimuli/Face28_J.png",
+      "stimuli/Face55_J.png",
+      "stimuli/Face95_J.png",
+      "stimuli/Face104_J.png",
+      "stimuli/Face115_J.png",
+      "stimuli/Face119_J.png",
+      "stimuli/Face142_J.png",
+      "stimuli/Face10_B.png",
+      "stimuli/Face16_B.png",
+      "stimuli/Face17_B.png",
+      "stimuli/Face45_B.png",
+      "stimuli/Face85_B.png",
+      "stimuli/Face103_B.png",
+      "stimuli/Face116_B.png"
+  ];
+
+ preloadimages.push(faces);
 
 // VAAST --------------------------------------------------------------------------------
 // VAAST variables ----------------------------------------------------------------------
@@ -670,6 +709,12 @@ https://marinerougier.github.io/Expe6_RC_3appuis/RCmarine2.html
 if(is_compatible) {
   jsPsych.init({
       timeline: timeline,
+      preload_images: preloadimages,
+      max_load_time: 1000 * 500,
+      exclusions: {
+            min_width: 800,
+            min_height: 600,
+        },
       on_interaction_data_update: function() {
         saving_browser_events(completion = false);
       },
