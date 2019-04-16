@@ -315,7 +315,7 @@ var next_position = function(){
 // init ---------------------------------------------------------------------------------
   var saving_id = function(){
      database
-        .ref("participant_id/")
+        .ref("participant_id_3appuis/")
         .push()
         .set({jspsych_id: jspsych_id,
                prolificID: prolificID,
@@ -327,7 +327,7 @@ var next_position = function(){
 // vaast trial --------------------------------------------------------------------------
   var saving_vaast_trial = function(){
     database
-      .ref("vaast_trial/").
+      .ref("vaast_trial_3appuis/").
       push()
         .set({jspsych_id: jspsych_id,
           prolificID: prolificID,
@@ -342,7 +342,7 @@ var next_position = function(){
 
   var saving_browser_events = function(completion) {
     database
-     .ref("browser_event/")
+     .ref("browser_event_3appuis/")
      .push()
      .set({jspsych_id: jspsych_id,
       prolificID: prolificID,
