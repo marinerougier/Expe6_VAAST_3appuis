@@ -548,7 +548,7 @@ var vaast_first_step_training_1 = {
   avoidance_key: "n",
   stim_movement: jsPsych.timelineVariable('movement'),
   html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
-  force_correct_key_press: false,
+  force_correct_key_press: true,
   display_feedback: true,
   response_ends_trial: true
 }
@@ -563,7 +563,7 @@ var vaast_second_step_training_1 = {
   avoidance_key: "n",
   stim_movement: jsPsych.timelineVariable('movement'),
   html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
-  force_correct_key_press: false,
+  force_correct_key_press: true,
   display_feedback: true,
   response_ends_trial: true
 }
@@ -578,7 +578,7 @@ var vaast_third_step_training_1 = {
   avoidance_key: "n",
   stim_movement: jsPsych.timelineVariable('movement'),
   html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
-  force_correct_key_press: false,
+  force_correct_key_press: true,
   display_feedback: true,
   response_ends_trial: true
 }
