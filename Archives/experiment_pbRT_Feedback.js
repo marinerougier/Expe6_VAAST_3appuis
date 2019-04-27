@@ -334,7 +334,7 @@ var next_position = function(){
           ApproachedColor: vaast_condition_approach,
           ColorGroup: ColorGroup,
           timestamp: firebase.database.ServerValue.TIMESTAMP,
-          vaast_trial_data: jsPsych.data.get().last(4).json()})
+          vaast_trial_data: jsPsych.data.get().last(3).json()})
   }
 
 
@@ -550,36 +550,10 @@ var vaast_first_step_training_1 = {
   html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
   force_correct_key_press: false,
   display_feedback: true,
-  feedback_duration: 500, 
-  response_ends_trial: true
-}
-
-var vaast_second_step_1 = {
-  type: 'vaast-image',
-  stimulus: jsPsych.timelineVariable('stimulus'),
-  position: next_position_training,
-  background_images: background,
-  font_sizes:  image_sizes,
-  approach_key: "y",
-  avoidance_key: "n",
-  stim_movement: jsPsych.timelineVariable('movement'),
-  html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
-  force_correct_key_press: false,
-  display_feedback: true,
-  feedback_duration: 500, 
   response_ends_trial: true
 }
 
 var vaast_second_step_training_1 = {
-  chunk_type: "if",
-  timeline: [vaast_second_step_1],
-  conditional_function: function(){
-    var data = jsPsych.data.getLastTrialData().values()[0];
-    return data.correct;
-  }
-}
-
-var vaast_third_step_1 = {
   type: 'vaast-image',
   stimulus: jsPsych.timelineVariable('stimulus'),
   position: next_position_training,
@@ -591,20 +565,25 @@ var vaast_third_step_1 = {
   html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
   force_correct_key_press: false,
   display_feedback: true,
-  feedback_duration: 500, 
   response_ends_trial: true
 }
 
 var vaast_third_step_training_1 = {
-  chunk_type: "if",
-  timeline: [vaast_third_step_1],
-  conditional_function: function(){
-    var data = jsPsych.data.getLastTrialData().values()[0];
-    return data.correct;
-  }
+  type: 'vaast-image',
+  stimulus: jsPsych.timelineVariable('stimulus'),
+  position: next_position_training,
+  background_images: background,
+  font_sizes:  image_sizes,
+  approach_key: "y",
+  avoidance_key: "n",
+  stim_movement: jsPsych.timelineVariable('movement'),
+  html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
+  force_correct_key_press: false,
+  display_feedback: true,
+  response_ends_trial: true
 }
 
-var vaast_fourth_step_1 = {
+var vaast_fourth_step_training_1 = {
   type: 'vaast-image',
   position: next_position_training,
   stimulus: jsPsych.timelineVariable('stimulus'),
@@ -613,15 +592,6 @@ var vaast_fourth_step_1 = {
   stim_movement: jsPsych.timelineVariable('movement'),
   response_ends_trial: false,
   trial_duration: 650
-}
-
-var vaast_fourth_step_training_1 = {
-  chunk_type: "if",
-  timeline: [vaast_fourth_step_1],
-  conditional_function: function(){
-    var data = jsPsych.data.getLastTrialData().values()[0];
-    return data.correct;
-  }
 }
 
 
@@ -639,7 +609,7 @@ var vaast_training_block_G1Y = {
     save_vaast_trial
   ],
   timeline_variables: vaast_stim_training_G1Y,
-  repetitions: 1, //here, put 12 for 192 trials
+  repetitions: 12, //here, put 12 for 192 trials
   randomize_order: true,
   data: {
     phase:    "training",
@@ -660,7 +630,7 @@ var vaast_training_block_G1B = {
     save_vaast_trial
   ],
   timeline_variables: vaast_stim_training_G1B,
-  repetitions: 1, //here, put 12 for 192 trials
+  repetitions: 12, //here, put 12 for 192 trials
   randomize_order: true,
   data: {
     phase:    "training",
