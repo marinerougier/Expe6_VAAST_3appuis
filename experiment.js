@@ -168,7 +168,9 @@ var showing_cursor = {
       "stimuli/Face45_B.png",
       "stimuli/Face85_B.png",
       "stimuli/Face103_B.png",
-      "stimuli/Face116_B.png"
+      "stimuli/Face116_B.png",
+      "stimuli/Face119_B_Example.png",
+      "stimuli/Face95_J_Example.png"
   ];
 
  preloadimages.push(faces);
