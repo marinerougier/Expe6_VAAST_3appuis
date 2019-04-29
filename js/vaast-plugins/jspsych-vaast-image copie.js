@@ -110,7 +110,7 @@
 
     var html_str = "";
     
-    html_str += "<div style='position:absolute;right:0;top:0;width:100%; height:100%;background:url("+trial.background_images[trial.position]+") center no-repeat; background-size:100% auto'></div>";
+    html_str += "<div style='position:absolute;right:0;top:0;width:100%; height:100%;background:url("+trial.background_images[trial.position]+") center no-repeat'></div>";
     html_str += "<div style='position:relative;right:0;top;0;width:"+trial.font_sizes[trial.position]+"px'><img width='"+trial.font_sizes[trial.position]+"' src='"+trial.stimulus+"' id='jspsych-vaast-stim'></img></div>";
 
     html_str += "<div id='wrongImgID' style='position:relative; top: 100px; margin-left: auto; margin-right: auto; left: 0; right: 0'>";

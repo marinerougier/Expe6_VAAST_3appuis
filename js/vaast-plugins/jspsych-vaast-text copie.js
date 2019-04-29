@@ -1,26 +1,25 @@
 /**************************************************************
 * VAAST implementation in jsPsych. 
-* (image trial)
+* (text trial)
 *
 *
 *                   (cedric.batailler@univ-grenoble-alpes.fr)
 ***************************************************************/
 
- jsPsych.plugins['vaast-image'] = (function() {
+ jsPsych.plugins['vaast-text'] = (function() {
 
   var plugin = {};
 
   jsPsych.pluginAPI.registerPreload('vaast-image', 'stimulus', 'image');
 
   plugin.info = {
-    name: 'vaast-image',
+    name: 'vaast-itext',
     description: '',
     parameters: {
       stimulus: {
-        type: jsPsych.plugins.parameterType.IMAGE,
+        type: jsPsych.plugins.parameterType.STRING,
         pretty_name: 'Stimulus',
-        default: undefined,
-        description: 'The image to be displayed filename.'
+        description: 'The string to be displayed as fication'
       },
       approach_key: {
         type: jsPsych.plugins.parameterType.HTML_STRING, 
@@ -107,13 +106,12 @@
 
 
   plugin.trial = function(display_element, trial) {
-
     var html_str = "";
     
-    html_str += "<div style='position:absolute;right:0;top:0;width:100%; height:100%;background:url("+trial.background_images[trial.position]+") center no-repeat; background-size:100% auto'></div>";
-    html_str += "<div style='position:relative;right:0;top;0;width:"+trial.font_sizes[trial.position]+"px'><img width='"+trial.font_sizes[trial.position]+"' src='"+trial.stimulus+"' id='jspsych-vaast-stim'></img></div>";
+    html_str += "<div style='position:absolute;right:0;top:0;width:100%; height:100%;background:url("+trial.background_images[trial.position]+") center no-repeat;z-index:-1'></div>";
+    html_str += "<div style='height: 100vh; display: flex; justify-content: center; align-items: center;z-index:1; color: #ffffff; font-size: "+trial.font_sizes[trial.position]+"px' id='jspsych-vaast-stim'>"+trial.stimulus+"</div>";
 
-    html_str += "<div id='wrongImgID' style='position:relative; top: 100px; margin-left: auto; margin-right: auto; left: 0; right: 0'>";
+    html_str += "<div id='wrongImgID' style='position:absolute; top: 66%; margin-left: auto; margin-right: auto; left: 0; right: 0'>";
 
     if(trial.display_feedback === true) {
       html_str += "<div id='wrongImgContainer' style='visibility: hidden; position: absolute; top: -75px; margin-left: auto; margin-right: auto; left: 0; right: 0'><p>"+trial.html_when_wrong+"</p></div>";
@@ -226,7 +224,7 @@
               end_trial();
             }, trial.feedback_duration);
           }
-          if(trial.response_ends_trial && trial.display_feedback == true && trial.feedback_duration == null) {
+          if (trial.response_ends_trial && trial.display_feedback == true && trial.feedback_duration == null) {
             wImg.style.visibility = "visible";
             if(trial.force_correct_key_press) {
               var keyListener = jsPsych.pluginAPI.getKeyboardResponse({
