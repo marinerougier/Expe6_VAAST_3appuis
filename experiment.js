@@ -752,8 +752,8 @@ if(is_compatible) {
       },
     on_finish: function() {
         saving_browser_events(completion = true);
-        window.location.href = "https://marinerougier.github.io/Expe6_RC_3appuis/RCmarine2.html?jspsych_id=" + jspsych_id + "?prolificID=" + 
-        prolificID + "?vaast_condition_approach=" + vaast_condition_approach + "?ColorGroup=" + ColorGroup;
+        window.location.href = "https://marinerougier.github.io/Expe6_RC_3appuis/RCmarine2.html?jspsych_id=" + jspsych_id + "&prolificID=" + 
+        prolificID + "&vaast_condition_approach=" + vaast_condition_approach + "&ColorGroup=" + ColorGroup;
     }
   });
 }
