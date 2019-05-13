@@ -376,7 +376,7 @@ var save_vaast_trial = {
     stimulus:
       "<h1 class ='custom-title'> Welcome </h1>" +
       "<ul class='instructions'>" +
-      "In this study, you will have to <b>complete two categorization tasks</b>. Note that we " +
+      "In this study, you will have to <b>complete two tasks</b>. Note that we " +
       "will not collect any personally identifying information and that you can leave the experiment " +
       "at any moment. If you complete the experiment until the end, you will be retributed as stated on Prolific. " +
       "<b>If you decide to start this study, it means that you give your free and informed consent to participate. </b>" +
@@ -493,7 +493,7 @@ var vaast_instructions_4 = {
     "</ul>" +
     "<p class='instructions'>Please read carefully and make sure that you memorize the instructions above. </p>" +
     "<p class='instructions'><strong>Also, note that is it EXTREMLY IMPORTANT that you try to be as fast and accurate as you can. </strong></p>" +
-    "<p class ='instructions'>A red cross will appear if your response is incorrect (in this case, you will have to start again and give the correct answer). </p>" +
+    "<p class ='instructions'>A red cross will appear if your response is incorrect. </p>" +
     "<br>" +
     "<p class = 'continue-instructions'>Press <strong>enter</strong> to " +
     "begin the task.</p>",
