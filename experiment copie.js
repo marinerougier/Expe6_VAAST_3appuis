@@ -503,8 +503,7 @@ var vaast_instructions_4 = {
 var vaast_instructions_end = {
   type: "html-keyboard-response",
   stimulus:
-    "<p class='instructions'>The Video Game task (task 1) is completed. " +
-    "Now, you have to perform the Categorization Task (task 2). </p>" +
+    "<h1 class ='custom-title'> The Video Game task is now completed.</h1>" +
     "<br>" +
     "<p class = 'continue-instructions'>Press <strong>space</strong> to" +
     " begin Task 2.</p>",
@@ -642,7 +641,7 @@ var vaast_training_block_G1Y = {
     save_vaast_trial
   ],
   timeline_variables: vaast_stim_training_G1Y,
-  repetitions: 12, //here, put 12 for 192 trials
+  repetitions: 1, //here, put 12 for 192 trials
   randomize_order: true,
   data: {
     phase:    "training",
@@ -663,7 +662,7 @@ var vaast_training_block_G1B = {
     save_vaast_trial
   ],
   timeline_variables: vaast_stim_training_G1B,
-  repetitions: 12, //here, put 12 for 192 trials
+  repetitions: 1, //here, put 12 for 192 trials
   randomize_order: true,
   data: {
     phase:    "training",
